@@ -9,7 +9,7 @@ function saveHighScore() {
         comment: comment.value.trim()
     };
     localStorage.setItem('saved-named', JSON.stringify(scoreBoard));
-}
+} 
 
 function timer(){
     var sec = 75;
