@@ -5,6 +5,10 @@ body {
     height: 100vh;
 }
 
+#radio4 {
+    margin-left: 13px;
+}
+
 .panel {
     height: 100vh;
     display: flex;
