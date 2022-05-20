@@ -18,7 +18,7 @@ const scoreText = document.querySelector('#score');
 
 let currentQuestion = {};
 let acceptingAnswers = true;
-let availableQuestion  [];
+let availableQuestion = [];
 
 let questions = [
     {
@@ -65,8 +65,21 @@ let questions = [
         choice4: 'A man chooses, a slave obeys!',
         answer: 4,
     },
-]
+];
 
+const MAX_QUESTIONS = 5
+
+function startGame() {
+    availableQuestion = [...questions];
+    getNewQuestion();
+}
+
+function getNewQuestion() {
+    if (availableQuestion === 0) {
+    return window.location.assign('end.html') }
+
+    
+}
 
 function timer(){
     var sec = 75;
