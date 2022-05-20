@@ -82,8 +82,28 @@ function getNewQuestion() {
     currentQuestion = availableQuestion[questionIndex]
     question.innerText = currentQuestion.question
 
-    choices.forEach()
+    choices.forEach(choice => {
+        const numnber = choice.dataset['number']
+        choice.innerText = currentQuestion['choice' + number]
+    })
+
+    availableQuestion.splice(questionIndex, 1)
+
+    acceptingAnswers = true
 }
+
+choices.forEach(choices => {
+    choice.addEventListener('click', 0) => {
+        if (!acceptingAnswers) return
+
+        acceptingAnswers = false
+        const selectedChoice = e.target
+        const selectAnswer = selectedChoice.dataset['number']
+
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'wrong'
+
+    })
+})
 
 function timer(){
     var sec = 75;
@@ -100,5 +120,7 @@ function timer(){
 timer();
 
 console.log('correct', correct.value);
+
+startGame();
 
 
