@@ -9,26 +9,11 @@
     <link rel="stylesheet" href="assets/CSS/quiz.css">
 </head>
 <body>
-    <div class="container">
-        <div id="game" class="justify-center flex-column">
-            <div id="hud"></div>
-            <div class="hud-item"></div>
-            <h2> Q1: When was the Nintendo Entertainment System launched?</h2>
-            <br>
-            <div class="choice-container">
-                <p class="choice-prefix">A</p>
-                <p class="choice-text" data-number="1">Choice 1</p>
-                <p class="choice-prefix">B</p>
-                <p class="choice-text" data-number="2">Choice 2</p>
-                <p class="choice-prefix">C</p>
-                <p class="choice-text" data-number="3">Choice 3</p>
-                <p class="choice-prefix">D</p>
-                <p class="choice-text" data-number="4">Choice 4</p>
-
-                
-            </div>
-        </div>
-    </div>
+   <h1 id="questionTitle"></h1>
+   <div id="options">  
+   </div>
+   <button id = "submit" onclick="submit()">Get Result</button>
+   <button id = "submit" onclick="generateQuiz()">Next Question</button>
     
     <script src="assets/JS/quiz.js"></script>
 </body>
