@@ -58,12 +58,12 @@ let questions = [
     },
 
     {
-        question: 'Q5: Would you kindly...?',
-        choice1: 'Stomp on a goomba',
-        choice2: 'Shoot that enemy',
-        choice3: '...kindly do what?',
-        choice4: 'A man chooses, a slave obeys!',
-        answer: 4,
+    question: 'Q5: Would you kindly...?',
+    choice1: 'Stomp on a goomba',
+    choice2: 'Shoot that enemy',
+    choice3: '...kindly do what?',
+    choice4: 'A man chooses, a slave obeys!',
+    answer: 4,
     },
 ];
 
@@ -78,7 +78,11 @@ function getNewQuestion() {
     if (availableQuestion === 0) {
     return window.location.assign('end.html') }
 
-    
+    const questionIndex = Math.floor(Math.random()=availableQuestion.length)
+    currentQuestion = availableQuestion[questionIndex]
+    question.innerText = currentQuestion.question
+
+    choices.forEach()
 }
 
 function timer(){
