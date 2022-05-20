@@ -1,17 +1,3 @@
-// var savedName = document.getElementById('saved-name');
-// var grade = document.getElementById('grades');
-// var comment = document.getElementById('msg');
-// var correct = document.getElementById('radio4');
-
-// function saveHighScore() {
-//     var scoreBoard = {
-//         savedName: savedName.value,
-//         grade: grade.value,
-//         comment: comment.value.trim()
-//     };
-//     localStorage.setItem('saved-named', JSON.stringify(scoreBoard));
-// } 
-
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const scoreText = document.querySelector('#score');
@@ -20,90 +6,70 @@ let currentQuestion = {};
 let acceptingAnswers = true;
 let availableQuestion = [];
 
-let questions = [
+var questions = [
     {
     question: 'Q1: When was the Nintendo Entertainment System launched?',
-    choice1: '1980',
-    choice2: '1979',
-    choice3: '1985',
-    choice4: '1991',
+    choice1: '1. 1980',
+    choice2: '2. 1979',
+    choice3: '3. 1985',
+    choice4: '4. 1991',
     answer: 2,
     },
 
     {
     question: 'Q2: Which main character fights against the Shinra company?',
-    choice1: 'Mario',
-    choice2: 'Master Chief',
-    choice3: 'Cloud Strife',
-    choice4: 'Crash Bandicoot',
+    choice1: '1. Mario',
+    choice2: '2. Master Chief',
+    choice3: '3. Cloud Strife',
+    choice4: '4. Crash Bandicoot',
     answer: 3,
     },
 
     {
     question: 'Q3: Which came first??',
-    choice1: 'Call of Duty: Advanced Warfare',
-    choice2: 'Call of Duty: Warzone',
-    choice3: 'Call of Duty: Black Ops',
-    choice4: 'Call of Duty 4: Modern Warfare ',
+    choice1: '1. Call of Duty: Advanced Warfare',
+    choice2: '2. Call of Duty: Warzone',
+    choice3: '3. Call of Duty: Black Ops',
+    choice4: '4. Call of Duty 4: Modern Warfare ',
     answer: 4,
     },
 
     {
     question: 'Q4: If you see a glowing object on a video game boss, that is its...',
-    choice1: 'Strength',
-    choice2: 'Stamina',
-    choice3: 'Weakness',
-    choice4: 'Tickle, tickle, tickle!',
+    choice1: '1. Strength',
+    choice2: '2. Stamina',
+    choice3: '3. Weakness',
+    choice4: '4. Tickle, tickle, tickle!',
     answer: 3,
     },
 
     {
     question: 'Q5: Would you kindly...?',
-    choice1: 'Stomp on a goomba',
-    choice2: 'Shoot that enemy',
-    choice3: '...kindly do what?',
-    choice4: 'A man chooses, a slave obeys!',
+    choice1: '1. Stomp on a goomba',
+    choice2: '2. Shoot that enemy',
+    choice3: '3. ...kindly do what?',
+    choice4: '4. A man chooses, a slave obeys!',
     answer: 4,
     },
 ];
 
-const MAX_QUESTIONS = 5
+var rightAnswer = 0
 
-function startGame() {
-    availableQuestion = [...questions];
-    getNewQuestion();
-}
+function generateQuiz(){
+    var numberOfQuiz = questions.length
+    var n = Math.floor(Math.random() * numberOfQuiz)
+    var question = questions[n]
+    var questionTitle = document.querySelector('#questionTitle')
+    var options = document.querySelector('#options')
+    questionTitle.innerHTML = question.question
+    options.innerHTML = ''
+    for (opt in question.options) {
+        options.innerHTML = options.innerHTML + '<input type = "radio" name = "answers" value = "' + opt + '"/>' + questipn.options
+        [opt] + '<br />'
+    }
+    rightAnser = question.answer
+};
 
-function getNewQuestion() {
-    if (availableQuestion === 0) {
-    return window.location.assign('end.html') }
-
-    const questionIndex = Math.floor(Math.random()=availableQuestion.length)
-    currentQuestion = availableQuestion[questionIndex]
-    question.innerText = currentQuestion.question
-
-    choices.forEach(choice => {
-        const numnber = choice.dataset['number']
-        choice.innerText = currentQuestion['choice' + number]
-    })
-
-    availableQuestion.splice(questionIndex, 1)
-
-    acceptingAnswers = true
-}
-
-choices.forEach(choices => {
-    choice.addEventListener('click', 0) => {
-        if (!acceptingAnswers) return
-
-        acceptingAnswers = false
-        const selectedChoice = e.target
-        const selectAnswer = selectedChoice.dataset['number']
-
-        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'wrong'
-
-    })
-})
 
 function timer(){
     var sec = 75;
