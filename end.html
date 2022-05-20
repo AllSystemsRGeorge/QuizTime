@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Video Game Challenge Highscore!</title>
+    <link rel="reset" href="assets/CSS/reset.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
 </head>
+    <div class="container">
+        <div id="end" class="flex-center flex-column">
+            <h1 id="finalScore"></h1>
+            <form class="end-form-container">
+            <h2 id="end-text">Enter your name into the Score Board!</h2>
+            <input type="text" name="name" id="username" 
+            placeholder="Enter Your Name!">
+            <button class="button" id="saveScoreBtn" type="submit"
+            onclick="saveHighScore(event)" disabled>Save</button>
+            </form>
+        </div>
+    </div>
 <body>
     
 </body>
