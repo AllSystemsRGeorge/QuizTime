@@ -61,13 +61,14 @@ function submit() {
             alert('Time keeps on slipping!')
 }
 
-function endGame() {
-    if questions {
-
-        window.location.href = 'end.html'
+function endQuiz() {
+    if (questions.length) {
+        isFinite(questions > 5)
+        window.location.href = 'end.html';
     }
 }
 
+console.log(endQuiz)
 
 function timer(){
     var sec = 75;
