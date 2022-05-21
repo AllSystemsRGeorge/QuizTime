@@ -1,4 +1,4 @@
-/* :root {
+:root {
     background-color: white;
 }
 
@@ -11,12 +11,12 @@
 }
 
 .container {
-    width: 100vw;
-    height: 100vh;
+    width: 200vw;
+    height: 200vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 80px;
+    max-width: 200px;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -43,6 +43,10 @@
     display: none;
 }
 
+#TimerDisplay {
+    float: right;
+}
+
 .button {
     background-color: purple;
     border: none;
@@ -58,61 +62,5 @@
 }
 
 .button:hover {
-    background-color: rgb(245, 176, 245);
-} */
-
-
-
-
-
-
-
-
-
-.choice-container {
-    display: flex;
-    margin-bottom: 12px;
-    width: 100%;
-    border-radius: 4px;
-    font-size: 16px;
-    min-width: 100px;
-}
-
-.choice-container:hover {
-    cursor: pointer;
-    box-shadow: black
-}
-
-.choice-prefix {
-    padding: 3px 3px;
-    color: purple;
-}
-
-.choice-text {
-    padding: 3px
-
-}
-
-.correct {
-   font: grey;
-}
-
-#hud {
-    display: flex;
-    justify-content: space-betweeen;
-}
-
-.hud-prefix {
-    text-align: center;
-    font-size: 5px;
-}
-
-.hud-main-text {
-    text-align: center;
-}
-
-@media screen and (max-width: 760px) {
-    .choice-container {
-        min-width: 40px;
-    }
+    background-color: rgb(245, 176, 245); */
 }

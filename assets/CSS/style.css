@@ -76,7 +76,7 @@ input {
     width: 20rem;
     padding: 1.5rem;
     font-size: 1.8rem;
-    border: none;
+    border: solid;
 }
 
 input::placeholder {
